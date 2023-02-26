@@ -47,7 +47,7 @@ export const Home = () => {
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     speed: 3000,
     autoplaySpeed: 20,
     cssEase: "linear",
@@ -169,7 +169,7 @@ export const Home = () => {
       {/* PASOS PARA ADOPTAR */}
       <Grid component="section" sx={{position:'relative', minHeight:'100vh', backgroundColor:'white', p:{xs:0, sm: 10}}}> 
         <Grid display="flex" justifyContent="center">
-          <Button variant='contained' size='large' sx={{mt:{xs: 8, sm:0}}} href='/contact' >
+          <Button variant='contained' size='large' sx={{mt:{xs: 8, sm:0}}} onClick={() => handleNavNavigate('contact')} >
             <Typography fontWeight='bold'>Encontra tu mascota</Typography>
           </Button>
         </Grid>
@@ -251,7 +251,7 @@ export const Home = () => {
                   sx={{pt:3, pb:5, fontSize:{xs:'1rem'}}}>Si no podes adoptar, <b>podes prestarles tu hogar </b> un pequeño periodo de tiempo
                   hasta que podamos encontrarles un hogar definitivo.
                 </Typography>
-                <Button variant='contained' color='primary' href='/contact'>
+                <Button variant='contained' color='primary' onClick={() => handleNavNavigate('contact')}>
                   <Typography sx={{fontWeight:'bold'}}>Completá el formulario</Typography>
                 </Button>
 
